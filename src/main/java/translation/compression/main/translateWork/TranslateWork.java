@@ -29,14 +29,14 @@ public class TranslateWork {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        List<Item> listItem = CompressionSrt.getZimuList("./data/dist/all_zimu.rst");
+        List<Item> listItem = CompressionSrt.getZimuList("./data/dist/all_zimu.srt");
         System.out.println(listItem.size());
 
-        List<Item> cnListItem = CompressionSrt.getZimuList("./data/dist/cn_zimu.rst");
+        List<Item> cnListItem = CompressionSrt.getZimuList("./data/dist/cn_zimu.srt");
 
         Map<String, Item> haveItemMap = cnListItem.stream().collect(Collectors.toMap(Item::getCurrentIndex, a -> a));
 
-        Path writePath = Paths.get("./data/dist/" + "cn_zimu" + ".rst");
+        Path writePath = Paths.get("./data/dist/" + "cn_zimu" + ".srt");
 
         if (Files.notExists(writePath)) {
             Files.createFile(writePath);

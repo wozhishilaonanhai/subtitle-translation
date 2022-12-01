@@ -160,7 +160,7 @@ public class CompressionSrt {
 
         System.out.println(cnListItem);
 
-        Path writePath = Paths.get("./data/dist/" + "all_zimu.rst");
+        Path writePath = Paths.get("./data/dist/" + "all_zimu.srt");
         writeList(writePath, cnListItem);
     }
 
