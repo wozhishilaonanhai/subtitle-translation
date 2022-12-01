@@ -18,6 +18,10 @@ https://www.youtube.com/watch?v=gyMwXuJrbJQ
 `String id = "有道ID";
 String secret = "有道密钥";`
 
+如果觉得最终的中文字幕一段太长，可以自行调整缩短一段字幕长度
+
+`int threshold = 9000; // 间隔时间ms`
+
 # 代码步骤
 
 * 经过 CompressionSrt.java 执行后
