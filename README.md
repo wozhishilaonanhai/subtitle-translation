@@ -15,10 +15,10 @@ https://www.youtube.com/watch?v=gyMwXuJrbJQ
 # 代码步骤
 
 * 经过 CompressionSrt.java 执行后
-* 生成 all_zimu.rst
+* 生成 all_zimu.rst （初步整理断句为完整句子）
 * 经过 TranslateWork.java 执行后
-* 生成 cn_zimu.rst
-* 经过 Cutting.java 执行后
+* 生成 cn_zimu.rst （翻译后的字幕，完整句子）
+* 经过 Cutting.java 执行后 （中文裁剪成小句）
 * 生成 cn_zimu_ultimately.rst 最终字幕文件
 
 # 字幕食用步骤
