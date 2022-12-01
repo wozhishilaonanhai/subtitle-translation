@@ -22,7 +22,7 @@ public class Cutting {
     public static void main(String[] args) throws IOException {
 
         // 读取字幕
-        List<Item> cnListItem = CompressionSrt.getZimuList("./data/dist/cn_zimu.txt");
+        List<Item> cnListItem = CompressionSrt.getZimuList("./data/dist/cn_zimu.rst");
         List<Item> newCuttingCnListItem = new ArrayList<>();
         // 间隔时间
         int threshold = 9000;
@@ -78,7 +78,7 @@ public class Cutting {
         }
 
 
-        Path writePath = Paths.get("./data/dist/cn_zimu_ultimately" + ".txt");
+        Path writePath = Paths.get("./data/dist/cn_zimu_ultimately" + ".rst");
         CompressionSrt.writeList(writePath, newCuttingCnListItem);
 
     }
