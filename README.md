@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=gyMwXuJrbJQ
 
 项目中的代码并不严谨。我只是针对该字幕编写的代码。出现bug什么越位，空指针啥的请自行更改并最好提交。
 
-本项目要自行提供有道云翻译API。也可以自己编写翻译API
+本项目要自行提供有道云翻译API。也可以自己编写翻译API。
 在 TranslateTool.java文件更改 id和密钥 <br/>
 
 `String id = "有道ID";
