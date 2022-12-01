@@ -8,6 +8,7 @@ import translation.compression.main.compressionSrt.CompressionSrt;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +26,7 @@ public class Cutting {
         List<Item> cnListItem = CompressionSrt.getZimuList("./data/dist/cn_zimu.srt");
         List<Item> newCuttingCnListItem = new ArrayList<>();
         // 间隔时间
-        int threshold = 9000;
+        int threshold = 5000;
 
         for (Item item : cnListItem) {
             System.out.println(item.currentIndex);
@@ -79,7 +80,7 @@ public class Cutting {
 
 
         Path writePath = Paths.get("./data/dist/cn_zimu_ultimately" + ".srt");
-        CompressionSrt.writeList(writePath, newCuttingCnListItem);
+        CompressionSrt.writeList(writePath, newCuttingCnListItem, StandardOpenOption.CREATE);
 
     }
 

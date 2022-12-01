@@ -6,10 +6,7 @@ import translation.compression.Item;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -42,7 +39,7 @@ public class CompressionSrt {
         List<Item> listItem = new ArrayList<>();
 
         List<String> allLines = Files.lines(path).collect(Collectors.toList());
-        if (allLines.isEmpty()){
+        if (allLines.isEmpty()) {
             return Collections.emptyList();
         }
         if (!"".equals(allLines.get(allLines.size() - 1).trim())) {
@@ -161,7 +158,7 @@ public class CompressionSrt {
         System.out.println(cnListItem);
 
         Path writePath = Paths.get("./data/dist/" + "all_zimu.srt");
-        writeList(writePath, cnListItem);
+        writeList(writePath, cnListItem, StandardOpenOption.CREATE);
     }
 
     /**
@@ -171,7 +168,7 @@ public class CompressionSrt {
      * @param listItem  段落列表
      * @throws IOException io
      */
-    public static void writeList(Path writePath, List<Item> listItem) throws IOException {
+    public static void writeList(Path writePath, List<Item> listItem, OpenOption... options) throws IOException {
 
         if (Files.notExists(writePath)) {
             Files.createFile(writePath);
@@ -187,7 +184,7 @@ public class CompressionSrt {
                     .append(_item.getContent())
                     .append("\n\n");
         }
-        Files.write(writePath, writeStr.toString().getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+        Files.write(writePath, writeStr.toString().getBytes(StandardCharsets.UTF_8), options);
     }
 
     /**
