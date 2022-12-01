@@ -6,11 +6,13 @@
 **Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript – 32-Hour Course:**
 https://www.youtube.com/watch?v=gyMwXuJrbJQ
 
+因为youtebe 上这个视频太大了，字幕文件也大。机翻根本翻译不出来中文。只能自己翻译。
+
 项目中 cn_zimu_ultimately.rst 为最终的中文字幕。可以自行导入到视频中食用。我自己正在食用，过程中发现问题也会优化
 
 项目中的代码并不严谨。我只是针对该字幕编写的代码。出现bug什么越位，空指针啥的请自行更改并最好提交。
 
-# 步骤
+# 代码步骤
 
 * 经过 CompressionSrt.java 执行后
 * 生成 all_zimu.rst
@@ -19,6 +21,11 @@ https://www.youtube.com/watch?v=gyMwXuJrbJQ
 * 经过 Cutting.java 执行后
 * 生成 cn_zimu_ultimately.rst 最终字幕文件
 
+# 字幕食用步骤
+* 下载原视频 例如：https://www.youtube.com/watch?v=gyMwXuJrbJQ
+* 用本地播放器打开
+* 导入 cn_zimu_ultimately.rst 字幕
+* 食用
 
 # 工具
 * hutool
